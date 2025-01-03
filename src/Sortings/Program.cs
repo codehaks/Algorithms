@@ -4,7 +4,14 @@ Console.WriteLine("Quick Sort Demo");
 
 var random = new Random();
 
-var numbers = Enumerable.Range(1, 100).OrderBy(x => random.Next()).ToList();
+var numbers = new List<int>();
+
+for (int i = 1; i <= 100; i++)
+{
+    var num = random.Next(1, 100);
+    numbers.Add(num);
+}
+
 var sortedNumbers = SortBy.QuickSort(numbers);
 
 for (int i = 0; i < numbers.Count; i++)
