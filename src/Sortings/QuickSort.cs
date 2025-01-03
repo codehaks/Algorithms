@@ -14,24 +14,31 @@ public static class SortBy
         {
             return numbers;
         }
-        var lastNumber = numbers.Last();
+        var pivot = numbers.Last();
+
         var smallerNumbers = new List<int>();
+        var equalNumbers = new List<int>();
         var largerNumbers = new List<int>();
+
         foreach (var number in numbers)
         {
-            if (number < lastNumber)
+            if (number < pivot)
             {
                 smallerNumbers.Add(number);
+            }else if (number == pivot)
+            {
+                equalNumbers.Add(number);
             }
-            else if (number > lastNumber)
+            else if (number > pivot)
             {
                 largerNumbers.Add(number);
             }
         }
 
         var tempNumbers = new List<int>();
+
         tempNumbers.AddRange(QuickSort(smallerNumbers));
-        tempNumbers.Add(lastNumber);
+        tempNumbers.AddRange(equalNumbers);
         tempNumbers.AddRange(QuickSort(largerNumbers));
 
         return tempNumbers;

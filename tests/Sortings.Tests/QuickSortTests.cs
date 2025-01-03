@@ -17,7 +17,7 @@ public class QuickSortTests
     }
 
     [Fact]
-    public void QuickSort_SortsRepeatedNumbersCorrectly()
+    public void QuickSort_Sorts_duplicate_numbers_NumbersCorrectly()
     {
         // Arrange
         var numbers = new List<int> { 5,2, 8, 1, 2 };
