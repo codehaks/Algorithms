@@ -10,36 +10,30 @@ public static class SortBy
 
     public static List<int> QuickSort(List<int> numbers)
     {
-        if (numbers.Count <= 2)
+        if (numbers.Count == 0)
         {
             return numbers;
         }
-
-
-        var pivot = numbers.Last();
-
+        var lastNumber = numbers.Last();
         var smallerNumbers = new List<int>();
         var largerNumbers = new List<int>();
-
-
         foreach (var number in numbers)
         {
-            if (pivot < number)
+            if (number < lastNumber)
             {
                 smallerNumbers.Add(number);
             }
-            else if (pivot > number)
+            else if (number > lastNumber)
             {
                 largerNumbers.Add(number);
             }
         }
 
-        var sortedNumbers = new List<int>();
+        var tempNumbers = new List<int>();
+        tempNumbers.AddRange(QuickSort(smallerNumbers));
+        tempNumbers.Add(lastNumber);
+        tempNumbers.AddRange(QuickSort(largerNumbers));
 
-        sortedNumbers.AddRange(QuickSort(smallerNumbers));
-        sortedNumbers.Add(pivot);
-        sortedNumbers.AddRange(QuickSort(largerNumbers));
-
-        return sortedNumbers;
+        return tempNumbers;
     }
 }
