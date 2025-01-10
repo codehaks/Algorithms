@@ -12,7 +12,7 @@ for (int i = 1; i <= 100; i++)
     numbers.Add(num);
 }
 
-var sortedNumbers = SortBy.QuickSort(numbers);
+var sortedNumbers = BubbleSort.Run(numbers);
 
 for (int i = 0; i < numbers.Count; i++)
 {

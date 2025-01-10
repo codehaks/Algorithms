@@ -5,10 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Sortings;
-public static class SortBy
+public static class QuickSort
 {
 
-    public static List<int> QuickSort(List<int> numbers)
+    public static List<int> Run(List<int> numbers)
     {
         if (numbers.Count == 0)
         {
@@ -37,9 +37,9 @@ public static class SortBy
 
         var tempNumbers = new List<int>();
 
-        tempNumbers.AddRange(QuickSort(smallerNumbers));
+        tempNumbers.AddRange(Run(smallerNumbers));
         tempNumbers.AddRange(equalNumbers);
-        tempNumbers.AddRange(QuickSort(largerNumbers));
+        tempNumbers.AddRange(Run(largerNumbers));
 
         return tempNumbers;
     }

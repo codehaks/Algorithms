@@ -10,7 +10,7 @@ public class QuickSortTests
         var expected = new List<int> { 1, 2, 3, 5, 8 };
 
         // Act
-        var result = SortBy.QuickSort(numbers);
+        var result = QuickSort.Run(numbers);
 
         // Assert
         Assert.Equal(expected, result);
@@ -24,7 +24,7 @@ public class QuickSortTests
         var expected = new List<int> { 1, 2, 2, 5, 8 };
 
         // Act
-        var result = SortBy.QuickSort(numbers);
+        var result = QuickSort.Run(numbers);
 
         // Assert
         Assert.Equal(expected, result);
@@ -38,7 +38,7 @@ public class QuickSortTests
         var expected = new List<int>();
 
         // Act
-        var result = SortBy.QuickSort(numbers);
+        var result = QuickSort.Run(numbers);
 
         // Assert
         Assert.Equal(expected, result);
@@ -52,7 +52,7 @@ public class QuickSortTests
         var expected = new List<int> { 42 };
 
         // Act
-        var result = SortBy.QuickSort(numbers);
+        var result = QuickSort.Run(numbers);
 
         // Assert
         Assert.Equal(expected, result);
