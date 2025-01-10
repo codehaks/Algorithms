@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sortings;
+namespace Sortings.Algorithms;
 public static class QuickSort
 {
 
@@ -25,7 +25,8 @@ public static class QuickSort
             if (number < pivot)
             {
                 smallerNumbers.Add(number);
-            }else if (number == pivot)
+            }
+            else if (number == pivot)
             {
                 equalNumbers.Add(number);
             }

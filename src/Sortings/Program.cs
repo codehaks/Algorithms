@@ -1,4 +1,4 @@
-﻿using Sortings;
+﻿using Sortings.Algorithms;
 
 Console.WriteLine("Quick Sort Demo");
 

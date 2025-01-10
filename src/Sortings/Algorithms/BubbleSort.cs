@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sortings;
+namespace Sortings.Algorithms;
 public static class BubbleSort
 {
     public static List<int> Run(List<int> list)
