@@ -6,17 +6,17 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Sortings.Tests;
-public class BubbleSortTests
+public class SelectionSortTests
 {
     [Fact]
-    public void BubbleSort_SortsNumbersCorrectly()
+    public void SelectionSort_SortsNumbersCorrectly()
     {
         // Arrange
         var numbers = new List<int> { 5, 3, 8, 1, 2 };
         var expected = new List<int> { 1, 2, 3, 5, 8 };
 
         // Act
-        var result = BubbleSort.Run(numbers);
+        var result = SelectionSort.Run(numbers);
 
         // Assert
         Assert.Equal(expected, result);
