@@ -32,7 +32,5 @@ public static class SelectionSort
         }
 
         return list;
-
-        return list;
     }
 }
